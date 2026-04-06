@@ -100,11 +100,11 @@ def example_1_to_1_mapping():
     exporter = ExcelExporter("examples/output/simple_1_to_1_mapping.xlsx")
     exporter.export(context)
 
-    print(f"\n✓ Created {len(mappings)} 1:1 mappings")
-    print(f"  - employee_id → emp_id")
-    print(f"  - first_name → fname")
-    print(f"  - last_name → lname")
-    print(f"\n✓ Exported to: examples/output/simple_1_to_1_mapping.xlsx")
+    print(f"\n[OK] Created {len(mappings)} 1:1 mappings")
+    print(f"  - employee_id -> emp_id")
+    print(f"  - first_name -> fname")
+    print(f"  - last_name -> lname")
+    print(f"\n[OK] Exported to: examples/output/simple_1_to_1_mapping.xlsx")
 
 
 if __name__ == "__main__":

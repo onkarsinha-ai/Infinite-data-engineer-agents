@@ -8,6 +8,10 @@ from src.mapping.mapping_lineage import (
 )
 from src.utils.logger import get_logger
 
+import openpyxl
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from openpyxl.utils import get_column_letter
+
 logger = get_logger(__name__)
 
 
@@ -25,10 +29,6 @@ class ExcelExporter:
         logger.info(f"Exporting mapping context to {self.output_path}")
 
         try:
-            import openpyxl
-            from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
-            from openpyxl.utils import get_column_letter
-
             self.workbook = openpyxl.Workbook()
             self.workbook.remove(self.workbook.active)
 
@@ -98,7 +98,7 @@ class ExcelExporter:
 
     def _create_one_to_one_tab(self, context: MappingContext) -> None:
         """Create 1:1 mappings tab."""
-        ws = self.workbook.create_sheet("1:1 Mappings")
+        ws = self.workbook.create_sheet("1-to-1 Mappings")
         
         headers = [
             "Mapping ID",
@@ -139,7 +139,7 @@ class ExcelExporter:
 
     def _create_many_to_one_tab(self, context: MappingContext) -> None:
         """Create N:1 mappings (aggregation) tab."""
-        ws = self.workbook.create_sheet("N:1 Mappings")
+        ws = self.workbook.create_sheet("N-to-1 Mappings")
         
         headers = [
             "Mapping ID",
@@ -180,7 +180,7 @@ class ExcelExporter:
 
     def _create_one_to_many_tab(self, context: MappingContext) -> None:
         """Create 1:N mappings (decomposition) tab."""
-        ws = self.workbook.create_sheet("1:N Mappings")
+        ws = self.workbook.create_sheet("1-to-N Mappings")
         
         headers = [
             "Mapping ID",

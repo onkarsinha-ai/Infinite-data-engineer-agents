@@ -109,10 +109,10 @@ def example_many_to_one_mapping():
     exporter = ExcelExporter("examples/output/many_to_one_aggregation.xlsx")
     exporter.export(context)
 
-    print(f"\n✓ Created {len([mapping1, mapping2])} N:1 aggregation mappings:")
-    print(f"  - (first_name + last_name) → full_name via CONCAT")
-    print(f"  - (salary + bonus) → total_compensation via SUM")
-    print(f"\n✓ Exported to: examples/output/many_to_one_aggregation.xlsx")
+    print(f"\n[OK] Created {len([mapping1, mapping2])} N:1 aggregation mappings:")
+    print(f"  - (first_name + last_name) -> full_name via CONCAT")
+    print(f"  - (salary + bonus) -> total_compensation via SUM")
+    print(f"\n[OK] Exported to: examples/output/many_to_one_aggregation.xlsx")
 
 
 if __name__ == "__main__":

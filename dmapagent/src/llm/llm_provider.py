@@ -2,7 +2,7 @@
 import os
 from typing import Optional, Dict, Any
 from abc import ABC, abstractmethod
-from config import get_settings
+from src.config import get_settings
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)

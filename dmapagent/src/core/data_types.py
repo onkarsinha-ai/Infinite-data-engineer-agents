@@ -2,7 +2,7 @@
 from enum import Enum
 from typing import Dict, Optional, Tuple
 from dataclasses import dataclass
-from config import get_settings
+from src.config import get_settings
 
 settings = get_settings()
 

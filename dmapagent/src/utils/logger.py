@@ -1,7 +1,7 @@
 """Logging utility module."""
 import logging
 import sys
-from config import get_settings
+from src.config import get_settings
 
 settings = get_settings()
 

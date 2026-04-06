@@ -115,11 +115,11 @@ def example_one_to_many_mapping():
     exporter = ExcelExporter("examples/output/one_to_many_decomposition.xlsx")
     exporter.export(context)
 
-    print(f"\n✓ Created {len([mapping1, mapping2])} 1:N decomposition mappings:")
-    print(f"  - full_name → (first_name + last_name) via SPLIT")
-    print(f"  - address_data → (street + city) via PARSE_STRUCT")
-    print(f"\n⚠ Both mappings are DESTRUCTIVE (potential data loss)")
-    print(f"\n✓ Exported to: examples/output/one_to_many_decomposition.xlsx")
+    print(f"\n[OK] Created {len([mapping1, mapping2])} 1:N decomposition mappings:")
+    print(f"  - full_name -> (first_name + last_name) via SPLIT")
+    print(f"  - address_data -> (street + city) via PARSE_STRUCT")
+    print(f"\n[WARN] Both mappings are DESTRUCTIVE (potential data loss)")
+    print(f"\n[OK] Exported to: examples/output/one_to_many_decomposition.xlsx")
 
 
 if __name__ == "__main__":
